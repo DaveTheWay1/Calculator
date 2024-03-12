@@ -13,15 +13,16 @@ const operators = document.querySelectorAll('.operator');
 function handleNum1(e){
     const val = e.target;
     // const containsOperator = operatorsArr.some(operator => num1.includes(operator));
-    if (!containsOperator){
+    // if (!containsOperator){
         if (!operatorsArr.includes(val)){
             num1 += val.innerText; 
             output.innerText = num1;
-        } else if (operators.includes(val)){
+        } else if (operatorsArr.includes(val)){
+            console.log(val);
             total = num1;
             num1 = ''
         }
-    }
+    // }
 //     else { 
 //         handleNum2();
 //     }
